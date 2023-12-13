@@ -1,0 +1,77 @@
+@import url(./AuthButton.css);
+
+.App {
+  text-align: center;
+  /* display: flex; */
+  justify-content: center; /* выравнивание элементов по левому краю */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.ContentContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.HeaderContent {
+  display: flex;
+  align-items: center;
+}
+
+.HealthStatus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+  grid-template-rows: auto auto auto; /* Три строки: первая для HealthData, вторая для ImageContainer, третья для StatusContainer */
+  gap: 50px; /* Расстояние между элементами в grid */
+  grid-template-areas:
+    "left center right"
+    "left center right"
+    "bottom bottom bottom"; /* Размещение элементов по областям */
+}
+
+.HealthData {
+  grid-area: left;
+  margin-left: 125px;
+}
+
+.ImageContainer img{
+  grid-area: center;
+  width: 450px;
+  height: auto;
+  margin-top: 30px;
+}
+
+.ConstHealthData {
+  grid-area: right;
+}
+
+.StatusContainer {
+  grid-area: bottom;
+}
+
+.LogoutButton {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: white;
+}
+
+.LogoutButton button {
+  color: white; /* Добавьте это свойство для изменения цвета текста кнопки на белый */
+  /* Другие стили кнопки здесь, если нужно */
+}

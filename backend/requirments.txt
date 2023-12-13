@@ -1,0 +1,7 @@
+FastAPI
+SQLAlchemy>1.4, >2.0
+dependency_injector
+alembic
+psycopg2
+uvicorn
+pydantic>1.4, <2.0
